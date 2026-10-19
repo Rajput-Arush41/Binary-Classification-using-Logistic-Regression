@@ -1,0 +1,113 @@
+{
+  "eda": {
+    "shape": [
+      7043,
+      20
+    ],
+    "numerical_features": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges"
+    ],
+    "categorical_features": [
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod"
+    ],
+    "missing_values": {
+      "gender": 0,
+      "SeniorCitizen": 0,
+      "Partner": 0,
+      "Dependents": 0,
+      "tenure": 0,
+      "PhoneService": 0,
+      "MultipleLines": 0,
+      "InternetService": 0,
+      "OnlineSecurity": 0,
+      "OnlineBackup": 0,
+      "DeviceProtection": 0,
+      "TechSupport": 0,
+      "StreamingTV": 0,
+      "StreamingMovies": 0,
+      "Contract": 0,
+      "PaperlessBilling": 0,
+      "PaymentMethod": 0,
+      "MonthlyCharges": 0,
+      "TotalCharges": 11,
+      "Churn": 0
+    },
+    "churn_distribution": {
+      "No": 5174,
+      "Yes": 1869
+    },
+    "churn_distribution_pct": {
+      "No": 73.46,
+      "Yes": 26.54
+    }
+  },
+  "preprocessing": {
+    "rows_after_cleaning": 7043,
+    "features_after_encoding": 30,
+    "train_size": 5634,
+    "test_size": 1409,
+    "train_churn_rate": 26.54,
+    "test_churn_rate": 26.54
+  },
+  "evaluation": {
+    "confusion_matrix": [
+      [
+        747,
+        288
+      ],
+      [
+        81,
+        293
+      ]
+    ],
+    "accuracy": 0.7381,
+    "precision": 0.5043,
+    "recall": 0.7834,
+    "f1_score": 0.6136,
+    "roc_auc": 0.8417,
+    "classification_report": "              precision    recall  f1-score   support\n\n    No Churn       0.90      0.72      0.80      1035\n       Churn       0.50      0.78      0.61       374\n\n    accuracy                           0.74      1409\n   macro avg       0.70      0.75      0.71      1409\nweighted avg       0.80      0.74      0.75      1409\n"
+  },
+  "interpretation": {
+    "top_positive_drivers": {
+      "InternetService_Fiber optic": 1.222,
+      "TotalCharges": 0.487,
+      "StreamingMovies_Yes": 0.421,
+      "PaymentMethod_Electronic check": 0.402,
+      "StreamingTV_Yes": 0.395,
+      "PaperlessBilling_Yes": 0.336,
+      "MultipleLines_Yes": 0.325,
+      "SeniorCitizen_1": 0.154,
+      "PaymentMethod_Mailed check": 0.052,
+      "DeviceProtection_Yes": 0.041
+    },
+    "top_negative_drivers": {
+      "Contract_Two year": -1.413,
+      "tenure": -1.156,
+      "Contract_One year": -0.715,
+      "MonthlyCharges": -0.546,
+      "PhoneService_Yes": -0.348,
+      "OnlineSecurity_Yes": -0.335,
+      "TechSupport_Yes": -0.269,
+      "Dependents_Yes": -0.231,
+      "MultipleLines_No phone service": -0.189,
+      "OnlineBackup_No internet service": -0.183
+    }
+  }
+}
